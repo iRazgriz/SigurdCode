@@ -63,6 +63,35 @@ datum
 			required_reagents = list("aluminum" = 1, "silicon" = 1, "oxygen" = 1)
 			result_amount = 3
 */
+				oroxaline
+			name = "Oroxaline"
+			id = "oroxaline"
+			result = "oroxaline"
+			required_reagents = list("pacid" = 1, "sacid" = 1, "chlorine" = 1)
+			result_amount = 3
+
+		berxilene
+			name = "Berxilene"
+			id = "berxilene"
+			result = "berxilene"
+			required_reagents = list("impedrezene" = 1, "cryptobiolin" = 1, "plasma" = 1)
+			result_amount = 2
+
+		apoxadine
+			name = "Apoxadine"
+			id = "apoxadine"
+			result = "apoxadine"
+			required_reagents = list("tricordrazine" = 1, "carbon" = 1)
+			required_catalysts = list("plasma" = 5)
+			result_amount = 1
+
+		ferexotradine
+			name = "Ferexotradine"
+			id = "ferexotradine"
+			result = "ferexotradine"
+			required_reagents = list("clonexadone" = 1, "glycerol" = 1, "plasma" = 1, "tricordrazine" = 1)
+			result_amount = 3
+			
 		stoxin
 			name = "Sleep Toxin"
 			id = "stoxin"
