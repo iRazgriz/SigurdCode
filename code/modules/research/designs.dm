@@ -67,15 +67,15 @@ datum/design/proc/CalcReliability(var/list/temp_techs)
 
 
 ///////////////////Computer Boards///////////////////////////////////
-
-datum/design/seccamera
-	name = "Circuit Design (Security)"
-	desc = "Allows for the construction of circuit boards used to build security camera computers."
-	id = "seccamera"
-	req_tech = list("programming" = 2)
+datum/design/autoloom
+	name = "Autoloom Board"
+	desc = "The circuit board for a autoloom."
+	id = "autoloom"
+	req_tech = list("programming" = 2, "engineering" = 2)
 	build_type = IMPRINTER
 	materials = list("$glass" = 2000, "sacid" = 20)
-	build_path = "/obj/item/weapon/circuitboard/security"
+	build_path = "/obj/item/weapon/circuitboard/autoloom"
+
 
 datum/design/aicore
 	name = "Circuit Design (AI Core)"
@@ -1155,6 +1155,23 @@ datum/design/light_replacer
 ////////////////////////////////////////
 //////////////MISC Boards///////////////
 ////////////////////////////////////////
+datum/design/autoloom
+	name = "Autoloom Board"
+	desc = "The circuit board for a autoloom."
+	id = "autoloom"
+	req_tech = list("programming" = 2, "engineering" = 2)
+	build_type = IMPRINTER
+	materials = list("$glass" = 2000, "sacid" = 20)
+	build_path = "/obj/item/weapon/circuitboard/autoloom"
+
+datum/design/chem
+	name = "Chem Dispenser Board"
+	desc = "Allows for the construction of circuit boards used to build new chem dispensers."
+	id = "chem"
+	req_tech = list("programming" = 4, "biotech" = 3, "bluespace"= 3)
+	build_type = IMPRINTER
+	materials = list("$glass" = 2000, "sacid" = 20, "$diamond" = 100)
+	build_path = "/obj/item/weapon/circuitboard/chem_dispenser"
 
 datum/design/destructive_analyzer
 	name = "Destructive Analyzer Board"
