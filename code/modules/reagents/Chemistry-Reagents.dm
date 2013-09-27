@@ -1924,6 +1924,49 @@ datum
 				holder.remove_reagent(src.id, 0.4)
 				..()
 				return
+				
+				ferexotradine
+			name = "Ferexotradine"
+			id = "ferexotradine"
+			description = "The Ferexotradine is the most advanced chemical for what concerns the use in a cryogenetic machinary."
+			reagent_state = LIQUID
+			color = "#C8A5DC" // rgb: 200, 165, 220
+
+			on_mob_life(var/mob/living/M as mob)
+				if(!M) M = holder.my_atom
+				if(M.bodytemperature < 170)
+					M.adjustCloneLoss(-6)
+					M.adjustOxyLoss(-6)
+					M.heal_organ_damage(6,6)
+					M.adjustToxLoss(-6)
+				..()
+				return
+
+		apoxadine
+			name = "Apoxadine"
+			id = "apoxadine"
+			description = "The Apoxadine is a broad-spectrum chemical used to heal a variety of injuries."
+			reagent_state = LIQUID
+			color = "#C8A5DC" // rgb: 200, 165, 220
+
+			on_mob_life(var/mob/living/M as mob)
+				if(M.stat == 2.0)
+					return
+				if(!M) M = holder.my_atom
+				if(M.getOxyLoss() && prob(80)) M.adjustOxyLoss(-2*REM)
+				if(M.getBruteLoss() && prob(80)) M.heal_organ_damage(2*REM,0)
+				if(M.getFireLoss() && prob(80)) M.heal_organ_damage(2,2*REM)
+				if(M.getToxLoss() && prob(80)) M.adjustToxLoss(-2*REM)
+				..()
+				return
+
+		berxilene
+			name = "Berxilene"
+			id = "berxilene"
+			description = "A very powerful drug, know for its devastating effects on the brain vital functions."
+			reagent_state = LIQUID
+			color = "#C8A5DC" // rgb: 200, 165, 220
+
 
 
 /////////////////////////Food Reagents////////////////////////////
