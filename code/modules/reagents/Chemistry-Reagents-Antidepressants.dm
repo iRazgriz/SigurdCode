@@ -90,3 +90,33 @@ Methylphenidate
 	result = "paroxetine"
 	required_reagents = list("mindbreaker" = 1, "oxygen" = 1, "inaprovaline" = 1)
 	result_amount = 3
+
+
+/datum/reagent/antidepressant/valium
+	name = "Valium"
+	id = "valium"
+	description = "A mild tranquillant."
+	reagent_state = LIQUID
+	color = "#C8A5DC"
+	custom_metabolism = 0.01
+	data = 0
+
+	on_mob_life(var/mob/living/M as mob)
+		if(!M) M = holder.my_atom
+		if(src.volume <= 0.1) if(data != -1)
+			data = -1
+			M << "\red You feel agitated.."
+		else
+			if(world.time > data + ANTIDEPRESSANT_MESSAGE_DELAY)
+				data = world.time
+				M << "\blue You feel a little weak, calm and relaxed.."
+		..()
+		return
+
+
+/datum/chemical_reaction/valium
+	name = "Valium"
+	id = "valium"
+	result = "valium"
+	required_reagents = list("mindbreaker" = 1, "oxygen" = 1)
+	result_amount = 3
