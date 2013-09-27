@@ -88,6 +88,7 @@
 	item_state = "jackboots"
 	item_color = "hosred"
 	siemens_coefficient = 0.7
+	species_restricted = null
 
 /obj/item/clothing/shoes/cult
 	name = "boots"
