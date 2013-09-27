@@ -163,6 +163,29 @@ micro-manipulator, console screen, beaker, Microlaser, matter bin, power cells.
 Note: Once everything is added to the public areas, will add m_amt and g_amt to circuit boards since autolathe won't be able
 to destroy them and players will be able to make replacements.
 */
+
+/obj/item/weapon/circuitboard/autoloom
+	name = "Circuit board (Autoloom)"
+	build_path = "/obj/machinery/loom"
+	board_type = "machine"
+	origin_tech = "programming=2"
+	frame_desc = "Requires 3 Matter Bins, 1 Manipulator, and 1 Console Screen."
+	req_components = list(
+							"/obj/item/weapon/stock_parts/matter_bin" = 3,
+							"/obj/item/weapon/stock_parts/manipulator" = 1,
+							"/obj/item/weapon/stock_parts/console_screen" = 1)
+
+/obj/item/weapon/circuitboard/chem_dispenser
+	name = "Circuit board (Chem Dispenser)"
+	build_path = "/obj/machinery/chem_dispenser"
+	board_type = "machine"
+	origin_tech = "programming=2"
+	frame_desc = "Requires 4 Large Beakers, 1 RCD, and 1 Console Screen."
+	req_components = list(
+							"/obj/item/weapon/stock_parts/console_screen" = 1,
+							"/obj/item/weapon/rcd" = 1,
+							"/obj/item/weapon/reagent_containers/glass/beaker/large" = 4)
+							
 /obj/item/weapon/circuitboard/destructive_analyzer
 	name = "Circuit board (Destructive Analyzer)"
 	build_path = "/obj/machinery/r_n_d/destructive_analyzer"
