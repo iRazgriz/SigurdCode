@@ -15,7 +15,7 @@
 	weaken = 10
 	stutter = 10
 	*/
-	agony = 40
+	agony = 120 //1 hit to drop unarmored targets, 2 hits for armored ones. -Raz
 	damage_type = HALLOSS
 	//Damage will be handled on the MOB side, to prevent window shattering.
 
